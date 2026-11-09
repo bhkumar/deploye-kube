@@ -1,4 +1,3 @@
-```dockerfile
 FROM ubuntu:latest
 
 LABEL maintainer="Bhupendra"
@@ -26,4 +25,3 @@ EXPOSE 80
 
 # Start Apache in foreground
 CMD ["apachectl", "-D", "FOREGROUND"]
-```
