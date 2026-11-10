@@ -1,0 +1,20 @@
+ kind: Deployment
+ apiVersion: apps/v1
+ metadata:
+    name: kubemaster
+    spec:
+    replicas: 2
+    selector:
+    matchLabels:
+      app: kubemaster
+    template:
+        metadata:
+          lables:
+            app: kubemaster
+        spec:
+          contaainers:
+          - name: kubemaster
+            image: bhkumar/pipeline-demo:latest
+            imagePullPolicy: Always
+            ports:
+            - containerPort: 80
